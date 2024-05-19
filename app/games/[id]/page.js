@@ -39,8 +39,7 @@ export default function GamePage(props) {
     const jwt = authContext.token
     let usersIdArray = game.users.length
       ? game.users.map((user) => user.id)
-      : []
-      ;
+      : [];
     usersIdArray.push(authContext.user.id);
     const response = await vote(
       `${endpoints.games}/${game.id}`,
